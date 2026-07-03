@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Corporate Matrix: HR & Support Confidential</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-user-select: none; }
+        
+        body, html { 
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden; 
+            background: #060b11;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #f1f5f9;
+        }
+
+        /* Luxury Dark Abstract Gradient Background (No Yellow, Pure Cinematic Deep Vibe) */
+        .cinematic-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;
+            background: radial-gradient(circle at 20% 30%, #1e1b4b 0%, #0f172a 50%, #020617 100%);
+        }
+
+        /* Premium Floating Mesh Glow Elements */
+        .glow-mesh {
+            position: fixed; width: 600px; height: 600px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            top: -200px; right: -100px; z-index: 2; pointer-events: none;
+            animation: pulseGlow 8s ease-in-out infinite alternate;
+        }
+        .glow-mesh-2 {
+            position: fixed; width: 500px; height: 500px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.12) 0%, transparent 70%);
+            bottom: -150px; left: -100px; z-index: 2; pointer-events: none;
+            animation: pulseGlow 10s ease-in-out infinite alternate-reverse;
+        }
+        @keyframes pulseGlow { 0% { transform: scale(1) translate(0, 0); } 100% { transform: scale(1.15) translate(30px, 20px); } }
+
+        .wrapper { position: relative; width: 100%; height: 100%; z-index: 10; display: flex; justify-content: center; align-items: center; padding: 20px; }
+
+        /* Sleek Cyberpunk/Minimalist Premium Glassmorphism Card Layout */
+        .premium-box {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 40px 30px;
+            border-radius: 24px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(99, 102, 241, 0.1);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .scene { display: none; }
+        .scene.active { display: block; animation: smoothFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        
+        @keyframes smoothFadeUp {
+            0% { opacity: 0; transform: translateY(15px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Sophisticated Micro-Typography */
+        .badge {
+            display: inline-block; padding: 6px 14px; font-size: 10px; font-weight: 700;
+            letter-spacing: 2px; text-transform: uppercase; background: rgba(99, 102, 241, 0.15);
+            color: #818cf8; border-radius: 100px; border: 1px solid rgba(99, 102, 241, 0.3);
+            margin-bottom: 25px;
+        }
+        
+        .main-heading { font-size: 24px; font-weight: 800; letter-spacing: -0.5px; color: #f8fafc; margin-bottom: 12px; }
+        .sub-heading { font-size: 14px; color: #94a3b8; font-weight: 400; line-height: 1.6; margin-bottom: 30px; }
+
+        /* Premium Input Fields */
+        .cyber-input {
+            width: 100%; background: rgba(2, 6, 17, 0.7); border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px; padding: 14px; color: #f8fafc; font-size: 16px; font-weight: 500;
+            text-align: center; outline: none; transition: all 0.3s ease; margin-bottom: 20px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .cyber-input:focus { border-color: #6366f1; box-shadow: 0 0 15px rgba(99, 102, 241, 0.25); }
+
+        /* Minimalist Solid Premium Buttons */
+        .btn-luxury {
+            background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+            color: #ffffff; border: none; padding: 14px 28px; font-size: 14px; font-weight: 600;
+            border-radius: 12px; cursor: pointer; display: inline-block; width: 100%;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3); transition: all 0.3s ease;
+            letter-spacing: 0.5px; margin: 8px 0;
+        }
+        .btn-luxury:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45); }
+        .btn-luxury:active { transform: translateY(0); }
+
+        .btn-ghost-escape {
+            position: fixed; background: #ef4444 !important; color: white; border: none;
+            padding: 12px 24px; font-size: 13px; font-weight: 600; border-radius: 10px;
+            box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.4); z-index: 99999;
+            cursor: pointer; transition: left 0.15s ease, top 0.15s ease;
+        }
+
+        /* Fluid Typography and Content Presentation */
+        .roast-narrative { font-size: 15px; color: #cbd5e1; line-height: 1.7; font-weight: 400; text-align: left; margin-bottom: 25px; background: rgba(255,255,255,0.02); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.04); }
+        .roast-narrative b { color: #f472b6; font-weight: 600; }
+        .verdict-line { font-size: 13px; color: #38bdf8; font-weight: 600; border-left: 3px solid #0284c7; padding-left: 12px; text-align: left; margin-top: 15px; }
+
+        /* Modern UI Popups (No more ugly native alert loops) */
+        .modern-modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(2, 6, 17, 0.85); backdrop-filter: blur(8px);
+            z-index: 100000; display: flex; justify-content: center; align-items: center;
+            opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+        }
+        .modern-modal-overlay.open { opacity: 1; pointer-events: auto; }
+        .modern-modal {
+            background: #0f172a; border: 1px solid rgba(255,255,255,0.1); padding: 30px;
+            border-radius: 20px; max-width: 400px; width: 85%; text-align: center;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5); transform: scale(0.9); transition: transform 0.4s ease;
+        }
+        .modern-modal-overlay.open .modern-modal { transform: scale(1); }
+        .modal-title { font-size: 18px; font-weight: 700; color: #ef4444; margin-bottom: 12px; }
+        .modal-desc { font-size: 14px; color: #94a3b8; line-height: 1.5; margin-bottom: 20px; }
+
+        /* Micro Interactions */
+        .luxury-emoji { font-size: 40px; margin-bottom: 15px; display: inline-block; animation: subtleFloat 3s ease-in-out infinite alternate; }
+        @keyframes subtleFloat { 0% { transform: translateY(0); } 100% { transform: translateY(-8px); } }
+    </style>
+</head>
+<body>
+
+    <div class="cinematic-bg"></div>
+    <div class="glow-mesh"></div>
+    <div class="glow-mesh-2"></div>
+
+    <div class="wrapper">
+        <div class="premium-box" id="mainContainer">
+            
+            <div class="scene active" id="stageLogin">
+                <span class="badge">Internal Access Security</span>
+                <h1 class="main-heading">Corporate Directory</h1>
+                <p class="sub-heading">Kindly input your official first name to authenticate and review your personalized workspace diagnostics reporting packet.</p>
+                <input type="text" id="userInputName" class="cyber-input" placeholder="Enter your first name..." autocomplete="off">
+                <button class="btn-luxury" onclick="handleAuth()">Authenticate & View 🔓</button>
+            </div>
+
+            <div class="scene" id="stageDiagnostics">
+                <div class="luxury-emoji" id="dynamicIcon">📑</div>
+                <h1 class="main-heading" id="dynamicTitle">Data Packet Loaded</h1>
+                <div class="roast-narrative" id="dynamicContent">Processing operational overview...</div>
+                <div id="dynamicControls"></div>
+            </div>
+
+            <div class="scene" id="stageFinale">
+                <div class="luxury-emoji">🕊️</div>
+                <h1 class="main-heading" style="color: #34d399;">Diagnostics Concluded</h1>
+                <p class="sub-heading" style="margin-bottom: 0; text-align: left; background: rgba(52, 211, 153, 0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(52, 211, 153, 0.15);">
+                    Your strategic confession has been permanently locked into the system database. Access privileges for this specific terminal session have now been revoked. 
+                    <br><br>
+                    <b>Status:</b> Closed. No further looping or initialization allowed. Kindly minimize your browser and focus on your active pending workflow items immediately.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modern-modal-overlay" id="customAlertOverlay">
+        <div class="modern-modal">
+            <div class="modal-title" id="alertTitle">System Notice</div>
+            <p class="modal-desc" id="alertDesc">Confession has been successfully routed to the system vault.</p>
+            <button class="btn-luxury" style="margin: 0; padding: 10px 20px;" onclick="closeCustomAlert()">Acknowledged</button>
+        </div>
+    </div>
+
+    <script>
+        // High-End Tailored Operational Realities (No Duplications, Pure Funny Contextual Separation)
+        const corporateDatabase = {
+            palak: {
+                icon: "📱🔮",
+                title: "Palak | Consultant Sourcing",
+                text: "Astrologer hiring ke naam par interviews arrange karna toh theek hai, par interview me <b>smart astrologers</b> ko dhyan se dekhna aur kaam ki baaton ke beech me unse <b>free me apni kismat, personal future aur shadi ke yog</b> nikalwana kab band hoga? Iska fayda uthana alag chal raha hai! Pure din phone par calls me chipke rehna, idhar-udhar ghumna aur break time par pure department ke sath baithkar <b>Manager se lekar baki sabki sharp mimicry</b> karna aapka permanent schedule ban chuka hai! 🤫",
+                verdict: "Status: Free Fortune Reading Loop Active."
+            },
+            varsha: {
+                icon: "🔮💼",
+                title: "Varsha | Sourcing Operations",
+                text: "Astrologers shortlist karne ke professional call me achanak personal questions ghusana aur unse <b>free reading ka free trial</b> chalwana ek alag hi talent hai! Sourcing me smart astrologer aate hi interview ka timing double ho jata hai! Pure din ka major time idhar-udhar ghumne-firne aur khane-peene ke naye spots dhoodhne me chala jata hai, aur jahan break milta hai toh sabke sath baithkar <b>Manager ki khidki tod burai aur chugliyaan</b> poore hosh-o-awaas me hoti hain! ☕",
+                verdict: "Status: Astrologer Vetting via Personal Charts."
+            },
+            tejasvi: {
+                icon: "⚡🎭",
+                title: "Tejasvi | Profiles & Onboarding",
+                text: "Astrologers ki internal profiles banate waqt aapka behavior ekdam unexpected rehta hai. Ek second pehle kisi baat par <b>itna bhayanak gussa ho jana</b> ki sab darr jayein, aur agle hi second achanak bina kisi wajah ke <b>paaglon ki tarah khilkhila kar hasne lagna</b>—yeh emotional switch samajhna poori team ke liye impossible hai! Office hours me kaam kam, chugliyon ke personal active circles chalana aur thoda sa free time milte hi <b>office boys ki de-reham mimicry</b> karke pure group ko hasana aapka real role ban gaya hai! 😂",
+                verdict: "Status: Multi-personality Behavioral Flux Detected."
+            },
+            utsavi: {
+                icon: "📞💥",
+                title: "Utsavi | Sourcing Engagement",
+                text: "Aapka workspace rotation aur idhar-udhar bhatakna ek mystery hai. Astrologer profiles active karte waqt call par itni sweet aawaz me <i>'Yes Sir... Of course Mam... Ji Bilkul Mam'</i> bolkar makkhan lagati ho, par jaise hi call cut hota hai, aapka roop turant badal jata hai aur dimaag kharab karke <b>bhayanak chidchidapan aur gusse me badbadana</b> shuru ho jata hai! Call par itna extreme makkhan aur call kat-te hi gussa? Baki time department me baith kar sabke sath bas pure group me timepass chalta hai! 🤫",
+                verdict: "Status: Post-Call Vocal Meltdown Syndrome."
+            },
+            ankita: {
+                icon: "📝🔥",
+                title: "Ankita | Letters & Vendor Coordination",
+                text: "Offer letters aur appointment letters ke complex documentation ke bojh me aapka dimaag har waqt red zone me rehta hai. Manager ke cabin me jao toh ekdam shareef aur disciplined ban kar <i>'Ji Mam, Right Mam, Bilkul Mam'</i> chalta hai... par piche se jab <b>vendors call par apne dhasu taane</b> sunate hain, toh unpar toh gussa nahi nikalta, balki aap turant group me call karke ya <b>pure circle me sabko sunakar</b> apna gussa vent karti ho! Baki bache hue ghante sirf group timepass aur manager ki burai me nikalte hain! 💸",
+                verdict: "Status: Ji-Mam Compliance vs Vendor Friction."
+            },
+            poonam: {
+                icon: "🤷‍♀️🎧",
+                title: "Poonam | Customer Experience Support",
+                text: "Customer queries aur escalations solve karne ke naam par aapka aadha din sirf Manager ke cabin ke chakkar kaatne aur wahan se dande khane me nikal jata hai. Koi senior complex resolution samjhaye toh <b>kuch dimaag me nahi ghusta</b>, bas wahan se blank hokar bahar aana, fir seat par baith kar zor-zor se hasna aur chugliyon ka main hub taiyar karna! Office me baithkar <b>Manager se lekar baki sabhi office boys tak ki mimicry</b> utarna, unki acting karna aur sabka hasi mazaak udana aapka core competence ban chuka hai! 🤡",
+                verdict: "Status: Clueless Support Framework with Elite Mimicry."
+            }
+        };
+
+        function handleAuth() {
+            const rawInput = document.getElementById('userInputName').value;
+            const formattedName = rawInput.trim().toLowerCase();
+
+            if (corporateDatabase[formattedName]) {
+                renderDiagnostics(formattedName);
+            } else {
+                showCustomAlert("Authentication Failure", "Access Denied. Entered identity does not map to any active Gossip/Chugli profile in the HR database. Input exact name!");
+            }
+        }
+
+        function renderDiagnostics(name) {
+            const data = corporateDatabase[name];
+            document.getElementById('stageLogin').classList.remove('active');
+
+            document.getElementById('dynamicIcon').innerHTML = data.icon;
+            document.getElementById('dynamicTitle').innerHTML = data.title;
+            document.getElementById('dynamicContent').innerHTML = data.text + `<div class="verdict-line">${data.verdict}</div>`;
+
+            // Injection of targeted non-repetitive micro controls
+            const controls = document.getElementById('dynamicControls');
+            controls.innerHTML = `
+                <button class="btn-luxury" onclick="executeConfession('${name}')">Accept Log & Close Diagnostic Session</button>
+                <button class="btn-ghost-escape" id="dodgeBtn" onmouseover="triggerDodge()" onclick="triggerDodge()">Nahi, Main Bilkul Shareef Hoon</button>
+            `;
+
+            document.getElementById('stageDiagnostics').classList.add('active');
+        }
+
+        function triggerDodge() {
+            const btn = document.getElementById('dodgeBtn');
+            const targetX = Math.random() * (window.innerWidth - 180);
+            const targetY = Math.random() * (window.innerHeight - 60);
+            btn.style.left = targetX + 'px';
+            btn.style.top = targetY + 'px';
+        }
+
+        let modalCallback = null;
+
+        function showCustomAlert(title, desc, callback) {
+            document.getElementById('alertTitle').innerHTML = title;
+            document.getElementById('alertDesc').innerHTML = desc;
+            document.getElementById('customAlertOverlay').classList.add('open');
+            modalCallback = callback;
+        }
+
+        function closeCustomAlert() {
+            document.getElementById('customAlertOverlay').classList.remove('open');
+            if (modalCallback) {
+                modalCallback();
+                modalCallback = null;
+            }
+        }
+
+        function executeConfession(name) {
+            // Elegant single system notification sequence instead of native multiple window loops
+            showCustomAlert(
+                "Secure Verification", 
+                `Confession packet for ${name.toUpperCase()} successfully signed and dispatched to the Core Auditing Server. Action logging complete.`,
+                function() {
+                    // Transition to a strictly flat dead-end final screen with no loop options or retry mechanisms
+                    document.getElementById('stageDiagnostics').classList.remove('active');
+                    document.getElementById('stageFinale').classList.add('active');
+                }
+            );
+        }
+
+        // Handle Enter Form Submissions smoothly
+        document.getElementById('userInputName').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') handleAuth();
+        });
+    </script>
+</body>
+</html>
